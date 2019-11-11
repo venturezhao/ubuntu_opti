@@ -1,1 +1,1 @@
-This reporsitory stores the guidelines that what should we do when we get the orignal Ubuntu.
+This reporsitory stores the guidelines about what we should do when we get the orignal Ubuntu.
