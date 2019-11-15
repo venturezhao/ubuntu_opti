@@ -1,0 +1,254 @@
+# customized bash configuration
+export SOFTWARE_BASE="/home/software"
+export LIC_HOME="$SOFTWARE_BASE/license"
+
+# User specific aliases and functions
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# =========================================================================
+# development tools configuration
+# =========================================================================
+
+# java environment
+export JAVA_HOME="$SOFTWARE_BASE/java/jdk1.8.0_181"
+export JRE_HOME="$JAVA_HOME/jre"
+export CLASSPATH=".:JAVA_HOME/lib:JRE_HOME/lib:$CLASSPATH"
+export PATH="$JAVA_HOME/bin:$JRE_HOME/bin:$PATH"
+
+# eclipse
+export ECLIPSE_HOME=$SOFTWARE_BASE/eclipse/eclipse-java
+export PATH="$PATH:$ECLIPSE_HOME"
+
+# jetbrains
+# export IDEA_HOME=$SOFTWARE_BASE/jetbrains/idea-IC-173.4301.25
+# export PATH="$PATH:$IDEA_HOME/bin"
+# export PYCH_HOME=$SOFTWARE_BASE/jetbrains/pycharm-community-2017.3.2
+# export PATH="$PATH:$PYCH_HOME/bin"
+
+# =========================================================================
+# text/doc tools configuration
+# =========================================================================
+
+# Typora
+# export PATH="$PATH:$SOFTWARE_BASE/Typora-linux-x64"
+
+# VS code
+alias code='LD_LIBRARY_PATH=/home/software/lib code'
+
+# Atom
+alias atom='LD_LIBRARY_PATH=/home/software/lib atom'
+
+# foxit reader
+export PATH="$PATH:$SOFTWARE_BASE/foxitsoftware/foxitreader"
+
+# texlive
+export TEXLIVE_HOME=$SOFTWARE_BASE/texlive/2017
+export PATH="$PATH:$TEXLIVE_HOME/bin/x86_64-linux"
+
+# =========================================================================
+# graphic tools configuration
+# =========================================================================
+
+# yEd
+export PATH="$PATH:$SOFTWARE_BASE/yEd"
+
+# =========================================================================
+# development tools configuration
+# =========================================================================
+
+# matlab
+# export MATH_HOME=$SOFTWARE_BASE/mathworks
+# export MATLAB_HOME=$MATH_HOME/MATLAB/2017b
+# export PATH="$PATH:$MATLAB_HOME/bin"
+
+# mathematic
+# export WOLF_HOME=$SOFTWARE_BASE/Wolfram
+# export MATHE_HOME=$WOLF_HOME/Mathematica/11.0
+# export PATH="$PATH:$MATHE_HOME/Executables"
+
+# =========================================================================
+# Logic tools configuration
+# =========================================================================
+
+# SystemC
+export SYSTEMC="$SOFTWARE_BASE/systemc/systemc-2.3.3"
+
+# UVM
+export UVM_HOME="$SOFTWARE_BASE/uvm/uvm-1.2"
+
+# RISCV
+export RISCV="/opt/riscv"
+export PATH="$PATH:$RISCV/bin"
+
+# set Xilinx environment
+export XLX_HOME=/home/software/Xilinx
+alias set_vivado174="source $XLX_HOME/Vivado/2017.4/settings64.sh"
+alias set_vivado173="source $XLX_HOME/Vivado/2017.3/settings64.sh"
+alias set_vivado182="source $XLX_HOME/Vivado/2018.2/settings64.sh"
+alias set_vivado191="source $XLX_HOME/Vivado/2019.1/settings64.sh"
+
+# indicate Xilinx environment manually
+# export XLX_HOME=$SOFTWARE_BASE/xilinx
+# export VIVADO_HOME=$XLX_HOME/Vivado/2017.4
+# export PATH="$PATH:$VIVADO_HOME/bin"
+# export SDK_HOME=$XLX_HOME/SDK/2017.4
+# export PATH="$PATH:$SDK_HOME/bin"
+# export SDX_HOME=$XLX_HOME/SDx/2017.4
+# export PATH="$PATH:$SDX_HOME/bin"
+# export NAV_HOME=$XLX_HOME/DocNav
+# export PATH="$PATH:$NAV_HOME"
+
+# synopsys
+export SYNOPSYS=$SOFTWARE_BASE/synopsys
+alias lmsnps="$SYNOPSYS/scl/2016.12/linux64/bin/lmgrd -c $LIC_HOME/synopsys.dat -l ~/.syn_lic.log"
+
+export FINSIM_HOME=$SYNOPSYS/finesim/L-2016.03
+export PATH="$PATH:$FINSIM_HOME/bin"
+
+export FM_HOME=$SYNOPSYS/fm/L-2016.03-SP1
+export PATH="$PATH:$FM_HOME/bin"
+
+export HSPICE_HOME=$SYNOPSYS/hspice/L-2016.06-SP1
+export PATH="$PATH:$HSPICE_HOME/bin"
+
+export ICC_HOME=$SYNOPSYS/icc/L-2016.03-SP1
+export PATH="$PATH:$ICC_HOME/bin"
+
+export IDQ_HOME=$SYNOPSYS/idq/L-2016.03-SP2
+export PATH="$PATH:$IDQ_HOME/bin"
+
+export LIBCOMP_HOME=$SYNOPSYS/libcomp/M-2016.12
+export PATH="$PATH:$LIBCOMP_HOME/bin"
+
+export MW_HOME=$SYNOPSYS/mw/L-2016.03-SP1
+export PATH="$PATH:$MW_HOME/bin"
+
+export NLINT_HOME=$SYNOPSYS/nlint/K-2015.09-SP1
+export PATH="$PATH:$NLINT_HOME/bin"
+
+export PTS_HOME=$SYNOPSYS/pts/M-2016.12-SP1
+export PATH="$PATH:$PTS_HOME/bin"
+
+export SSMT_HOME=$SYNOPSYS/ssmt/L-2016.03
+export PATH="$PATH:$SSMT_HOME/bin"
+
+export STARRC_HOME=$SYNOPSYS/starrc/J-2014.12-SP3
+export PATH="$PATH:$STARRC_HOME/bin"
+
+export SYN_HOME=$SYNOPSYS/syn/L-2016.03-SP1
+export PATH="$PATH:$SYN_HOME/bin"
+
+export VCS_HOME=$SYNOPSYS/vcs-mx/L-2016.06
+export PATH="$PATH:$VCS_HOME/bin"
+export VCS_ARCH_OVERRIDE=linux
+export VIRSIMHOME=$VCS_HOME/gui/virsim
+export VCS_CC=gcc-4.8
+
+export VERDI_HOME=$SYNOPSYS/verdi/L-2016.06-1
+export PATH="$PATH:$VERDI_HOME/bin"
+export LD_LIBRARY_PATH=$VERDI_HOME/share/PLI/VCS/linux64
+
+# export CCSS_HOME=$SYNOPSYS/ccss-2012.03
+# export PATH="$PATH:$CCSS_HOME/linux/ccss/bin"
+# export CTL_HOME=$SYNOPSYS/ctl-2012.06
+# export PATH="$PATH:$CTL_HOME/bin"
+# export FM_HOME=$SYNOPSYS/fm-2013.12
+# export PATH="$PATH:$FM_HOME/bin"
+# export HSPC_HOME=$SYNOPSYS/hspc-2012.06
+# export PATH="$PATH:$HSPC_HOME/hspice/bin"
+# export ICC_HOME=$SYNOPSYS/icc-2012.06
+# export PATH="$PATH:$ICC_HOME/bin"
+# export MW_HOME=$SYNOPSYS/mw-2012.06
+# export PATH="$PATH:$MW_HOME/AMD.64"
+# export SPF_HOME=$SYNOPSYS/spf-2013.03
+# export PATH="$PATH:$SPF_HOME/bin"
+# export SR_HOME=$SYNOPSYS/starrc-2012.12
+# export PATH="$PATH:$SR_HOME/amd64_starrc/bin"
+# export TX_HOME=$SYNOPSYS/tx-2009.06
+# export PATH="$PATH:$TX_HOME/bin"
+# export VERA_HOME=$SYNOPSYS/vera-2009.12/vera_vD-2009.12_amd64
+# export PATH="$PATH:$VERA_HOME/bin"
+
+# license file
+export SNPSLMD_LICENSE_FILE=27000@licsvr05
+
+export LM_LICENSE_FILE=$LIC_HOME/synopsys.dat
+# export LM_LICENSE_FILE=$LM_LICENSE_FILE:$LIC_HOME/matlab.lic
+# export LM_LICENSE_FILE=$LM_LICENSE_FILE:$LIC_HOME/ius0920.dat
+# export LM_LICENSE_FILE=$LM_LICENSE_FILE:$LIC_HOME/spb1630.dat
+# export LM_LICENSE_FILE=$LM_LICENSE_FILE:$LIC_HOME/quartus.dat
+# export LM_LICENSE_FILE=$LM_LICENSE_FILE:$LIC_HOME/modelsim.dat
+
+# ld_library_path
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$IUS_HOME/tools/lib
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SPB_HOME/tools/mainwin520/mw/lib-linux_optimized/
+
+# display screen
+# export DISPLAY=unix:0.0
+
+# alias for program
+alias dc="dc_shell-t"
+alias dv="design_vision"
+alias pt="pt_shell"
+alias pv="primetime"
+
+#cadence
+export CDS_ROOT="$SOFTWARE_BASE/cadence"
+# export DD_DONT_DO_OS_LOCKS=SET
+export LM_LICENSE_FILE="$LIC_HOME/cadence.dat:$LM_LICENSE_FILE"
+
+export IES_HOME="$CDS_ROOT/INCISIVE152"
+export PATH="$PATH:$IES_HOME/tools/bin"
+export LD_LIBRARY_PATH="$VERDI_HOME/share/PLI/IUS/LINUX64:$LD_LIBRARY_PATH"
+
+# old version
+# # alias
+# alias lmnvs="/home/eda/novas/verdi-2011.04/bin/lmgrd -c /home/eda/license/novas.dat -l ~/.nvs_lic.log"
+# alias lmspb="/home/eda/cadence/spb-16.30/tools/bin/lmgrd -c /home/eda/license/spb1630.dat -l ~/.spb_lic.log"
+# #alias lmius="/home/eda/cadence/ius-09.20/tools/bin/lmgrd -c /home/eda/license/ius0920.dat -l ~/.spb_lic.log"
+# # License
+# export LIC_HOME=/home/eda/license
+# 
+# # Company
+# export CDS_ROOT=/home/eda/cadence
+# export MG_HOME=/home/eda/mentor
+# export NVS_HOME=/home/eda/novas
+# export ALT_HOME=/home/eda/altera
+# export XLX_HOME=/home/eda/xilinx
+# export MTH_HOME=/home/eda/mathworks
+# 
+# # Product
+# #export MGC_HOME=$MG_HOME/calibre/ixl_cal_2008.1_20.15
+# export IUS_HOME=$CDS_ROOT/ius-09.20
+# export SPB_HOME=$CDS_ROOT/spb-16.30
+# #export IC_HOME=$CDS_ROOT/ic613
+# export VDI_HOME=$NVS_HOME/verdi-2011.04
+# #export OA_HOME=$IC_HOME/oa_v22.04.028
+# export QTS_HOME=$ALT_HOME/11.1/quartus
+# export MDS_HOME=$ALT_HOME/11.1/modelsim_ae
+# #export ISE_HOME=$XLX_HOME/12.4/ISE_DS/ISE
+# export MAT_HOME=$MTH_HOME/matlab2013a
+# 
+# # export CDS_AUTO_32BIT ALL
+# # export CDS_DIR=$SPB_HOME
+# export CDS_INST_DIR=$SPB_HOME
+# export CONCEPT_INST_DIR=$SPB_HOME
+# export CDS_SITE=$SPB_HOME/share/local
+# export CDSDOC_PROJECT=$SPB_HOME/doc
+# # export CDS_LIC_FILE=$LIC_HOME/spb1630.dat
+# 
+# # Path
+# export PATH=$PATH:$SPB_HOME/tools/jre/bin:$SPB_HOME/tools/bin:$SPB_HOME/tools/libutil/bin
+# export PATH=$PATH:$SPB_HOME/tools/pcb/bin:$SPB_HOME/tools/fet/bin:$SPB_HOME/tools/PSpice
+# export PATH=$PATH:$SPB_HOME/tools/PSpice/Library:$SPB_HOME/tools/specctra/bin:$SPB_HOME/bin
+# export PATH=$PATH:$SPB_HOME/tools/capture
+# #export PATH=$PATH:$IC_HOME/bin:$IC_HOME/tools/dfII/bin:$IC_HOME/tools/bin
+# #export PATH=$PATH:$MGC_HOME/bin
+# export PATH=$PATH:$IUS_HOME/bin:$IUS_HOME/tools/bin:$IUS_HOME/tools/dfII/bin
+# export PATH=$PATH:$VDI_HOME/bin
+# export PATH=$PATH:$QTS_HOME/bin:$MDS_HOME/linux
+# export PATH=$PATH:$ISE_HOME/bin/lin
+# export PATH=$PATH:$MAT_HOME/bin
+

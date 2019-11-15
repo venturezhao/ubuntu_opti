@@ -5,6 +5,7 @@ sudo apt -y install linux-tools-generic linux-tools-common
 sudo apt -y install csh ksh tcsh zsh
 sudo apt -y install python 
 sudo apt -y install perl
+sudo apt -y install xterm
 sudo apt -y install openjdk-8-jre openjdk-8-jdk openjdk-8-demo
 
 sudo apt -y install gcc-4.8 gcc-4.8-multilib g++-4.8 g++-4.8-multilib 
