@@ -28,7 +28,7 @@ sudo apt -y install ibus-pinyin ibus-rime
 
 # Virtualization
 sudo apt -y install virtualbox 
-sudo apt -y install wine64 
+sudo apt -y install wine-stable wine64 
 
 # Network
 sudo apt -y install git gitg
