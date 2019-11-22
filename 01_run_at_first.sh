@@ -21,7 +21,7 @@ sudo apt -y install nvidia-driver-435
 sudo apt -y install synaptic 
 sudo apt -y install gnome-tweak-tool 
 sudo apt -y install xfce4 xfce4-*
-sudo apt -y install veriaty
+sudo apt -y install variety
 sudo apt -y install shutter
 sudo apt -y install curl
 sudo apt -y install ibus-pinyin ibus-rime
